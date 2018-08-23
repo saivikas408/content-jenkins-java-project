@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  
+ 
 
   stages {
     stage ('Unit TEST') {
@@ -20,11 +20,11 @@ pipeline {
         sh 'cp /dist/rectangle_{env.MAJOR_VERSION}.${env.BUILD_NUMBER}.jar /var/www/html/rectangle'
       }
   }
-  
-  
+  }
   post{
     always{
       archiveArtifacts artifacts: 'dist/*.jar',fingerprint: true
     }
   }
+
 }
