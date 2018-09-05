@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        sh 'ant -f bulid.xml -v'
+        sh 'ant -f build.xml -v'
       }
     }
  }
