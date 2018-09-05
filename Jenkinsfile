@@ -10,7 +10,7 @@ pipeline {
     }
     stage ('Deploy'){
       steps {
-      sh 'cp /var/lib/jenkins/workspace/JAVA_PIPELINE/dist  /var/www/html' 
+      sh 'cp /var/lib/jenkins/workspace/JAVA_PIPELINE/dist/*  /var/www/html' 
       }
     }
  }
