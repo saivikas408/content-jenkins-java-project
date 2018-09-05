@@ -13,6 +13,7 @@ pipeline {
     stage ('Build') {
       steps {
         sh 'ant -f build.xml -v'
+        sh 'echo $BUILD_NUMBER'
       }
     }
     stage ('deploy') {
